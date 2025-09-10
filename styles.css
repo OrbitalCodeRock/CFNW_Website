@@ -1,0 +1,118 @@
+/* --- Basic Body & Font Styles --- */
+body {
+	margin: 0;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+	background-color: #f8f9fa;
+	color: #333;
+}
+
+/* --- Sticky Header --- */
+header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background-color: #212529;
+	padding: 1rem;
+	box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+	z-index: 1000;
+	box-sizing: border-box;
+}
+
+header nav {
+	display: flex;
+	justify-content: center;
+	gap: 25px;
+}
+
+header nav a {
+	color: #ffffff;
+	text-decoration: none;
+	font-weight: bold;
+	font-size: 1rem;
+	transition: color 0.2s ease-in-out;
+}
+
+header nav a:hover {
+	color: #007bff;
+}
+
+/* --- Main Content Layout --- */
+.container {
+	display: flex;
+	padding-top: 60px; /* Adjust to match header height */
+}
+
+/* --- Stationary Title Section (Left Side) --- */
+.title-section {
+	min-width: 200px;
+	max-width: 400px;
+	/* flex-shrink: 0; /* Prevents this column from shrinking */
+	height: calc(100vh - 60px); /* Full screen height minus header */
+	position: sticky;
+	top: 60px; /* Sticks below the header */
+	background-color: #e9ecef;
+	padding: 0.5rem;
+	box-sizing: border-box;
+	border-right: 1px solid #dee2e6;
+}
+
+.title-section h1 {
+	font-size: 1.5rem;
+	color: #000;
+	margin-top: 0;
+}
+
+.title-section p {
+	font-size: 1rem;
+	line-height: 1.5;
+	margin: 0rem 0;
+}
+
+.title-section strong {
+	color: #495057;
+}
+
+/* --- Scrollable Overview Section (Right Side) --- */
+.overview-section {
+	padding: 2rem 1.0rem;
+	flex-grow: 1; /* Allows this section to take up remaining space */
+	flex-shrink: 1;
+}
+
+.overview-section h2 {
+	font-size: 2rem;
+	color: #007bff;
+	border-bottom: 2px solid #dee2e6;
+	padding-bottom: 0.5rem;
+	margin-top: 0;
+}
+
+.overview-section img{
+	max-width: 100%
+}
+
+/* --- Itinerary Styling --- */
+.itinerary {
+	list-style: none;
+	padding: 0;
+}
+
+.itinerary .day-label{
+	font-weight: bold;
+}
+
+.itinerary > li {
+	background-color: #ffffff;
+	border-left: 5px solid #007bff;
+	padding: 1rem;
+	margin-bottom: 1rem;
+	box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.itinerary .time {
+	font-weight: bold;
+	display: block;
+	margin-bottom: 0.5rem;
+	color: #343a40;
+}
